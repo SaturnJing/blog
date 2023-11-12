@@ -2,14 +2,28 @@
 
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SaturnBlog</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <style type="text/css">
-    h1{
-      text-align: center;
+    h1 { 
+          text-align: center;
+          font-size: 40px;
+        }
+
+    body {
+      font-family: 'FenPinYinTi', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+    header{
+      width: 100%;
+      overflow: hidden;
     }
+
     .school {
-      height: 100px; width: 250px;
+      height: 100px; width: 250px; 
       background-color: #fbf8f2;
       border-style: ;
     }
@@ -21,19 +35,55 @@
       height: 100px; width: 250px;
       background-color: #fbf8f2;
     }
+
     .banner {
-      height: 500px;
-      background-image: url("https://imgloc.com/image/nFEDD");
-      background-position: 49% 26%
+      width: 100%;
+      display: flex;
+       animation: bannerAnimation 15s infinite;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+    }
+
+    @keyframes bannerAnimation {
+        0%, 20% {
+            transform: translateX(0%);
+        }
+        25%, 45% {
+            transform: translateX(-100%);
+        }
+        50%, 70% {
+            transform: translateX(-200%);
+        }
+        75%, 95% {
+            transform: translateX(-300%);
+        }
+    }
+    .font-cn {
+      @font-family: ;
+    }
+    @font-face {
+      font-family: 'FenPinYinTi';
+      src: url('https://saturnjing.github.io/blog/FenPinYinTi-2.ttf') format('truetype');
     }
   </style>
 </head>
 
 <body>
-  <h1>土星 blog</h1>
-  <div class="banner"></div>
+
+  <header>
+      <h1>土星•博客</h1>
+    <div class="banner">
+      <img src="https://i0.imgs.ovh/2023/11/12/nAWbV.png" alt="nAWbV.png" border="0" />
+      <img src="https://i0.imgs.ovh/2023/11/12/nAk4J.png" alt="nAk4J.png" border="0" />
+      <img src="https://i0.imgs.ovh/2023/11/12/nABXW.png" alt="nABXW.png" border="0" />
+    </div>
+  </header>
+
   <br>
-  <h1>Welcome • 欢迎</h1>
+  <h1>欢迎</h1>
   <br>
   <button class="school">学校</button>
   <button class="art ">绘画</button>
