@@ -2,21 +2,47 @@
 
 <html>
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaturnBlog</title>
+  <title>环绕土星</title>
+
+  <script>
+    (function() {
+      var OriginTitile = document.title, titleTime;
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+          document.title = '飘哪去了哇?(´･ω･`)';
+          clearTimeout(titleTime);
+        } else {
+          document.title = '回到土星啦!~(≧▽≦)~';
+          titleTime = setTimeout(function() {
+            document.title = OriginTitile;
+          },2000);
+        }
+      });
+    })();
+  </script>
+  
   <style type="text/css">
+
     h1 { 
           text-align: center;
-          font-size: 40px;
+          font-size: 50px;
+          color: #2A2F4F;
         }
 
     body {
       font-family: 'FenPinYinTi', sans-serif;
       margin: 0;
       padding: 0;
-      overflow-x: hidden; /* Prevent horizontal scrolling */
         }
+
+    .banner {
+      width: 100%;
+      height: 500px;
+    }
+
     header{
       width: 100%;
       overflow: hidden;
@@ -24,43 +50,18 @@
 
     .school {
       height: 100px; width: 250px; 
-      background-color: #fbf8f2;
+      background-color: #F1EAFF;
       border-style: ;
     }
     .art {
       height: 100px; width: 250px;
-      background-color: #fbf8f2;
+      background-color: #F1EAFF;
     }
     .daily {
       height: 100px; width: 250px;
-      background-color: #fbf8f2;
+      background-color: #F1EAFF;
     }
 
-    .banner {
-      width: 100%;
-      display: flex;
-       animation: bannerAnimation 15s infinite;
-    }
-
-    .banner img {
-      width: 100%;
-      height: auto;
-    }
-
-    @keyframes bannerAnimation {
-        0%, 20% {
-            transform: translateX(0%);
-        }
-        25%, 45% {
-            transform: translateX(-100%);
-        }
-        50%, 70% {
-            transform: translateX(-200%);
-        }
-        75%, 95% {
-            transform: translateX(-300%);
-        }
-    }
     .font-cn {
       @font-family: ;
     }
@@ -71,22 +72,22 @@
   </style>
 </head>
 
-<body>
+<body bgcolor="#FDE2F3">
 
   <header>
-      <h1>土星•博客</h1>
     <div class="banner">
-      <img src="https://i0.imgs.ovh/2023/11/12/nAWbV.png" alt="nAWbV.png" border="0" />
       <img src="https://i0.imgs.ovh/2023/11/12/nAk4J.png" alt="nAk4J.png" border="0" />
-      <img src="https://i0.imgs.ovh/2023/11/12/nABXW.png" alt="nABXW.png" border="0" />
     </div>
   </header>
 
+  <h1>土星•博客</h1>
   <br>
   <h1>欢迎</h1>
   <br>
+
   <button class="school">学校</button>
   <button class="art ">绘画</button>
   <button class="daily">日常</button>
+
 </body>
 </html>
