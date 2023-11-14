@@ -28,38 +28,86 @@
 
     h1 { 
           text-align: center;
-          font-size: 50px;
+          font-size: 70px;
           color: #2A2F4F;
         }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
 
     body {
       font-family: 'FenPinYinTi', sans-serif;
       margin: 0;
       padding: 0;
+      background-color:#e8f5fd; /*background colour*/
+      background-repeat: no-repeat;
+      background-attachment: fixed;
         }
 
-    .banner {
-      width: 100%;
-      height: 500px;
-    }
-
-    header{
-      width: 100%;
+    .background {
+      max-width: 100%;
       overflow: hidden;
+      box-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.2); 
     }
 
-    .school {
-      height: 100px; width: 250px; 
-      background-color: #F1EAFF;
-      border-style: ;
+    .background img{
+      width: 100%;
+      height: 90%;
+      display: block;
+      margin: 0 auto;
     }
-    .art {
-      height: 100px; width: 250px;
-      background-color: #F1EAFF;
+
+    .block {
+      text-align: center;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+
+      border-radius: 25px;
+      transition: box-shadow 0.3s ease; /*Shadow*/
+      padding: 20px;
+      width: 600px;
+      height: 200px;
+
+      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-right: 10px;
+      margin-left: 10px;
+
+      background-repeat: no-repeat;
+      
     }
-    .daily {
-      height: 100px; width: 250px;
-      background-color: #F1EAFF;
+
+    .block__link {
+     display:flex;
+     justify-content: center;
+      text-decoration: none;
+     color: #fbf5f5;
+    }
+
+    .block__link--1 {
+      background-image: url(https://i0.imgs.ovh/2023/11/14/nhzbp.png);
+      background-position: 40% 30%;
+    }
+
+    .block__link--2 {
+      background-image: url(https://i0.imgs.ovh/2023/11/14/n0ETA.png);
+      background-position: 50% 20%;
+    }
+
+    .block__link--3 {
+     background-image: url(https://i0.imgs.ovh/2023/11/14/nhJlR.png);
+     background-position: 50% 50%;
+    }
+
+    .block:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adjust the values for the shadow effect */
+      background-size: auto;
     }
 
     .font-cn {
@@ -70,24 +118,38 @@
       src: url('https://saturnjing.github.io/blog/FenPinYinTi-2.ttf') format('truetype');
     }
   </style>
+
 </head>
 
-<body bgcolor="#FDE2F3">
-
-  <header>
-    <div class="banner">
-      <img src="https://i0.imgs.ovh/2023/11/12/nAk4J.png" alt="nAk4J.png" border="0" />
+<body >
+  <div>
+    <div class="background">
+      <img src="https://c-ssl.duitang.com/uploads/item/201810/22/20181022142811_nUQKC.png" border="0"/> <!--Upper banner-->
     </div>
-  </header>
+  </div>
 
-  <h1>土星•博客</h1>
-  <br>
-  <h1>欢迎</h1>
-  <br>
+  <div>
+    <h1>土星•博客</h1>
+    <h1>欢迎</h1>
+  </div>
 
-  <button class="school">学校</button>
-  <button class="art ">绘画</button>
-  <button class="daily"><a href="https://saturnjing.github.io/blog/%E6%97%A5%E5%B8%B8">日常</a></button>
+  <div style="display: flex; justify-content: center;">
+    <a class="block block__link block__link--1" href="#">
+      🏫学校
+    </a>
+  </div>
+
+  <div style=" display:flex; justify-content: center; ">
+     <a class="block block__link block__link--2" href="#">
+      🎨绘画
+     </a>
+  </div>
+
+  <div style="display: flex; justify-content: center;">
+     <a class="block block__link block__link--3" href="https://saturnjing.github.io/blog/%E6%97%A5%E5%B8%B8">
+       🌄日常
+     </a>
+  </div>
 
 </body>
 </html>
